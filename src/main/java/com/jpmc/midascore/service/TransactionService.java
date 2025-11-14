@@ -29,6 +29,11 @@ public class TransactionService {
             return;
         }
 
+        if(sender.getBalance() - transaction.getAmount() < 0){
+            System.out.println("Not enough balance");
+            return;
+        }
+
         sender.setBalance(sender.getBalance() - transaction.getAmount());
         recipient.setBalance(recipient.getBalance() + transaction.getAmount());
 
