@@ -15,3 +15,18 @@ spring:
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
     properties:
       spring.json.trusted.packages: com.jpmc.midascore.foundation
+
+  datasource:
+    url: jdbc:h2:mem:transactionsDb
+    username: forage
+    password: pass123
+    driverClassName: org.h2.Driver
+  h2:
+    console.enabled: true
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+  
+
+
+
+#username, url, password, dialeact(no need to mention as it is deprecated),
